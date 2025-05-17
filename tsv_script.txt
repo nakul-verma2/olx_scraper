@@ -1,0 +1,14 @@
+#a shell script to extract Scheme Name and Asset Value from https://www.amfiindia.com/spages/NAVAll.txt and save as TSV.
+
+curl -s https://www.amfiindia.com/spages/NAVAll.txt -o NAVAll.txt
+
+
+awk -F';' '
+  NF == 6 && $1 ~ /^[0-9]+$/ {
+    # Print Scheme Name (4th column) and NAV (5th column) as TSV
+    print $4 "\t" $5
+  }
+' NAVAll.txt > scheme_nav.tsv
+
+echo "Sample extracted data:"
+head -10 scheme_nav.tsv
