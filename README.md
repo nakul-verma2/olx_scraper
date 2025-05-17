@@ -3,7 +3,7 @@
 A Python script to scrape car cover listings from OLX India using two methods:
 
 1. **HTML scraping via `requests` and BeautifulSoup** (limited results)
-2. **Direct API fetching via OLX's internal API** (more results)
+2. **Direct API fetching via `curl`** (more results)
 
 ---
 
@@ -28,7 +28,7 @@ Install dependencies via pip:
 ```bash
 pip install requests beautifulsoup4
 ```
-##Usage
+## Usage
 Run the script:
 
 ```bash
@@ -36,13 +36,13 @@ python olx_scraper.py
 ```
 You'll be prompted to choose the scraping method:
 
--Enter 1 to scrape via HTML requests (may return fewer results).
+- Enter 1 to scrape via HTML requests (may return fewer results).
 
--Enter 2 to fetch data from OLX API (more comprehensive results).
+- Enter 2 to fetch data from OLX API (more comprehensive results).
 
 For API fetching, you'll also be prompted to enter how many pages to scrape.
 
-##Output
+## Output
 ```Python
 For method 1 (HTML scraping), data is saved to olx_data_via_requests.csv.
 
@@ -53,17 +53,17 @@ Each CSV includes relevant fields such as:
 ```csv
 | Title | Username | Price | Description | Location | Latitude | Longitude | Google Maps Link | OLX Direct Link |
 ```
-##Notes
+## Notes
 API scraping uses direct HTTP GET requests with headers for best compatibility.
 
 Be mindful of request rates to avoid getting blocked by OLX.
 
-##This tool is for educational and personal use. Respect OLX's terms of service.
+## This tool is for educational and personal use. Respect OLX's terms of service.
 
-##License
+## License
 This project is released under the MIT License.
 
-##Contact
+## Contact
 For questions or suggestions, please open an issue or contact me at [nnakulvverma8@gmail.com].
 
 Happy scraping! 🚗🛡️
