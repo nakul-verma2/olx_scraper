@@ -19,7 +19,7 @@ A Python script to scrape car cover listings from OLX India using two methods:
 
 ## Requirements
 
-- Python 3.6+
+- `Python 3.6+`
 - `requests`
 - `beautifulsoup4`
 
